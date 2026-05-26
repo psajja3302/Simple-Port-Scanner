@@ -17,7 +17,7 @@ def scanner(ip, port, ports, lock):
 
 def main():
     #Validity Check of IP address using regex
-    validip = re.compile('^((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])$')
+    validip = re.compile(r'^((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])$')
     while True:
         ipinput = input('\nEnter the ip address you would like to scan (Ex: 192.168.23.23): ').strip()
         if validip.search(ipinput):
